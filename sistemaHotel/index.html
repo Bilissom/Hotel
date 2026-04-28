@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hotel Del Lago</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./img/logo.png" alt="Logo Hotel Del Lago" class="logo">
+            <h1>Bem Vindo ao Hotel Del Lago</h1>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="image-banner">
+                <div class="hero-text">
+                    <h2>Seu conforto é a nossa prioridade</h2>
+                    <p>Experiência Luxuosa, qualidade e conforto. Venha se hospedar conosco!</p>
+                    <div class="btn-group">
+                        <button id="btnVejaMais">Veja mais</button>
+                        <button id="btnLogin">Entrar</button>
+                        <button id="btnRegister">Registre-se</button>
+                        <button id="btnRooms">Quartos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <img src="./img/logo.png" class="modal-logo" alt="Logo Hotel Del Lago">
+                <h3>Cadastrar Hóspede</h3>
+                <form id="registerForm">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" name="name" id="name" placeholder="Ex: João da Silva" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Ex: joao@email.com" required>
+
+                    <label for="phone">Telefone / WhatsApp</label>
+                    <input type="tel" name="phone" id="phone" placeholder="(00) 90000-0000" pattern="[0-9\-\(\)\s]+"
+                        title="Apenas números" required>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeLoginModal">&times;</span>
+                <img src="./img/logo.png" class="modal-logo" alt="Logo Hotel Del Lago">
+                <h3>Entrar no Sistema</h3>
+                <form id="loginForm">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" name="loginEmail" id="loginEmail" required>
+                    <label for="loginPassword">Senha</label>
+                    <input type="password" name="loginPassword" id="loginPassword" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal" id="roomModal">
+            <div class="modal-content">
+                <span class="close" id="closeRoom">&times;</span>
+                <h3>status dos Quartos</h3>
+                <p id="roomsInfo"></p>
+            </div>
+        </div>
+
+        <!-- Novo Modal "Veja Mais" (Sobre o Hotel) -->
+        <div class="modal" id="aboutModal">
+            <div class="modal-content">
+                <span class="close" id="closeAboutModal">&times;</span>
+                <h3>Sobre o Hotel Del Lago</h3>
+                <p style="color: #444; line-height: 1.6; text-align: left; margin-bottom: 15px;">
+                    Localizado às margens de um lago cristalino e cercado pela natureza, o <strong>Hotel Del
+                        Lago</strong> oferece uma experiência inesquecível de luxo e tranquilidade.
+                </p>
+                <ul style="color: #444; text-align: left; padding-left: 20px; line-height: 1.8;">
+                    <li>🏊‍♂️ Piscinas de Borda Infinita e Águas Termais</li>
+                    <li>🍽️ Restaurante 5 Estrelas de Alta Gastronomia</li>
+                    <li>💆‍♀️ Spa Completo e Centro de Bem-Estar</li>
+                    <li>🚤 Passeios Exclusivos de Barco</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Hotel Del Lago. Todos os Direitos Reservados</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
